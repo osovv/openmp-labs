@@ -26,8 +26,9 @@ void func(int *A, int *B, int N, bool needParallel = true)
   unsigned long long int product = 1;
   start_time = omp_get_wtime();
 
-#pragma omp parallel shared(A, B, N) if (needParallel)
+#pragma omp parallel shared(A, B, N, product) if (needParallel)
   {
+#pragma omp for reduction(*: product)
     for (int i = 0; i < N; i++)
     {
       int sum = A[i] + B[i];

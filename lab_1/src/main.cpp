@@ -91,7 +91,7 @@ int func(int **matrix, int m, int n, int threads_num, bool needPrint = false)
     }
   }
 
-  delete arr;
+  delete[] arr;
   return total;
 }
 
@@ -113,5 +113,7 @@ int main(int argc, char **argv)
 
   func(matr, M, N, 1);
   func(matr, M, N, 8);
+
+  clear(matr, M);
   return 0;
 }
