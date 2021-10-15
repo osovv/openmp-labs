@@ -48,3 +48,5 @@ M: 100; N: 100; Threads:  8, Total:   197638; Elapsed time (ms): 3.91
 M: 500; N: 500; Threads:  1, Total: 24985662; Elapsed time (ms): 2150.23
 M: 500; N: 500; Threads:  8, Total: 24985662; Elapsed time (ms): 567.51
 ```
+
+Явно видим, что параллельный код работает быстрее последовательного.
